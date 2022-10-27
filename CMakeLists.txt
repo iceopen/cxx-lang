@@ -23,5 +23,5 @@ else()
 endif()
 
 message(STATUS ${CXX_SOURCE_DIR})
-add_subdirectory(lang/hello)
+add_subdirectory(lang)
 add_executable(cxx_lang main.cpp)
