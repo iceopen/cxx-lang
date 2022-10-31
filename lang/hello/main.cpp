@@ -3,7 +3,9 @@
 //
 #include <iostream>
 
+std::string say_hell() { return std::string("Hello, CMake world!"); }
+
 int main() {
-    std::cout << "Hello, Hello!" << std::endl;
-    return 0;
+    std::cout << say_hell() << std::endl;
+    return EXIT_SUCCESS;
 }
