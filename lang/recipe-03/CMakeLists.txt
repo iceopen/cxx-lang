@@ -1,6 +1,3 @@
-cmake_minimum_required(VERSION 3.22)
-project(recipe-03)
-
 add_library(message
         STATIC
         Message.h

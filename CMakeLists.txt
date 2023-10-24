@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.22)
-project(cxx_lang)
+cmake_minimum_required(VERSION 3.10)
 
+project(cxx-lang)
+# 设置
+set(CMAKE_C_COMPILER 11)
 set(CMAKE_CXX_STANDARD 11)
 #set output directory
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
@@ -23,5 +25,6 @@ else()
 endif()
 
 message(STATUS ${CXX_SOURCE_DIR})
-add_subdirectory(lang)
-add_executable(cxx_lang main.cpp)
+# add_subdirectory(lang)
+add_subdirectory(src)
+#add_executable(cxx_lang main.cpp)
