@@ -190,7 +190,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
         "${CMAKE_CURRENT_SOURCE_DIR}/support/cmake")
 
 include(CheckCXXCompilerFlag)
-#include(JoinPaths)
+include(JoinPaths)
 
 if (FMT_MASTER_PROJECT AND NOT DEFINED CMAKE_CXX_VISIBILITY_PRESET)
     set_verbose(CMAKE_CXX_VISIBILITY_PRESET hidden CACHE STRING
@@ -365,8 +365,8 @@ if (FMT_INSTALL)
             VERSION ${FMT_VERSION}
             COMPATIBILITY AnyNewerVersion)
 
-    # join_paths(libdir_for_pc_file "\${exec_prefix}" "${FMT_LIB_DIR}")
-    # join_paths(includedir_for_pc_file "\${prefix}" "${FMT_INC_DIR}")
+        join_paths(libdir_for_pc_file "\${exec_prefix}" "${FMT_LIB_DIR}")
+        join_paths(includedir_for_pc_file "\${prefix}" "${FMT_INC_DIR}")
 
     configure_file(
             "${PROJECT_SOURCE_DIR}/support/cmake/fmt.pc.in"
