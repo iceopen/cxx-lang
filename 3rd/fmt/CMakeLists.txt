@@ -365,8 +365,8 @@ if (FMT_INSTALL)
             VERSION ${FMT_VERSION}
             COMPATIBILITY AnyNewerVersion)
 
-    join_paths(libdir_for_pc_file "\${exec_prefix}" "${FMT_LIB_DIR}")
-    join_paths(includedir_for_pc_file "\${prefix}" "${FMT_INC_DIR}")
+    # join_paths(libdir_for_pc_file "\${exec_prefix}" "${FMT_LIB_DIR}")
+    # join_paths(includedir_for_pc_file "\${prefix}" "${FMT_INC_DIR}")
 
     configure_file(
             "${PROJECT_SOURCE_DIR}/support/cmake/fmt.pc.in"
