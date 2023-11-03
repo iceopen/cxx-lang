@@ -1,5 +1,6 @@
 #include <iostream>
 #include "box.h"
+#include "binary_tree.h"
 
 using namespace std;
 
@@ -144,17 +145,30 @@ void myPreprocessor() {
 #endif
 }
 
+void myBinaryTree() {
+    BinaryTree tree;
+    tree.insert(5);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(1);
+    tree.insert(9);
+    tree.insert(6);
+    cout << "Inorder traversal: ";
+    tree.inorderTraversal(tree.root);
+    cout << endl;
+}
+
 int main() {
     myClass();
     myInheritance();
     myOverloading();
     myDataEncapsulation();
     myPreprocessor();
-
+    myBinaryTree();
     cout << "Value of __LINE__ : " << __LINE__ << endl;
     cout << "Value of __FILE__ : " << __FILE__ << endl;
     cout << "Value of __DATE__ : " << __DATE__ << endl;
     cout << "Value of __TIME__ : " << __TIME__ << endl;
-    
+
     return 0;
 }
