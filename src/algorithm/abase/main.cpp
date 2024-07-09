@@ -44,6 +44,9 @@ string stuInfo(string name, int age = 18, double score = 60) {
 }
 
 int main() {
+    string (*fp)(string, int, double) = nullptr;
+    fp = stuInfo;
+
     ibase();
     ivector();
     // 字符串
